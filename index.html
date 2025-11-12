@@ -7,8 +7,35 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="gameCanvas"></canvas>
-  <script src="surfaces.js"></script>
+  <div id="levelSelectMenu">
+    <div id="tutorialButton" class="tutorial-button">?</div>
+    <h1>Select a Level</h1>
+    <div class="button-container">
+      <button class="level-button" data-level="1">Level 1</button>
+      <button class="level-button" data-level="2">Level 2</button>
+      <button class="level-button" data-level="3">Level 3</button>
+    </div>
+    <button id="resetProgressButton" class="reset-button">Reset Progress</button>
+  </div>
+  <canvas id="gameCanvas" style="display: none;"></canvas>
+  <div id="pauseButton" style="display: none;">PAUSE</div>
+  <div id="pauseOverlay" style="display: none;">
+    <div id="pauseMenu">
+      <div class="pause-option" id="resumeOption">Resume Level</div>
+      <div class="pause-option" id="restartOption">Restart Level</div>
+      <div class="pause-option" id="exitOption">Exit to Main Menu</div>
+    </div>
+  </div>
+  <div id="levelCompleteOverlay" style="display: none;">
+    <div id="levelCompleteMenu">
+      <h2 id="levelCompleteTitle">Level Complete!</h2>
+      <div id="levelCompleteTime">Time: 0:00</div>
+      <div class="level-complete-buttons">
+        <div class="level-complete-option" id="nextLevelOption">Next Level</div>
+        <div class="level-complete-option" id="mainMenuOption">Main Menu</div>
+      </div>
+    </div>
+  </div>
   <script src="character.js"></script>
 </body>
 </html>
